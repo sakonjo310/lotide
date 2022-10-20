@@ -24,13 +24,16 @@ const eqArrays = function (arr1, arr2) {
   return true;
 }
 
+
+
+
 const eqObjects = function (object1, object2) {
+  debugger
   let ob1Keys = Object.keys(object1);
   let ob2Keys = Object.keys(object2);
 
   if (ob1Keys.length !== ob2Keys.length) {
     return false;
-    process.exit();
   }
 
   for (let ob1Key of ob1Keys) {
@@ -39,14 +42,16 @@ const eqObjects = function (object1, object2) {
       if (eqArray) {
         continue;
       }
+      return false;
+
     }
     if (object1[ob1Key] === object2[ob1Key]) {
       continue;
     } else {
       return false;
-      process.exit();
     }
-  } return true;
+  }
+  return true;
 };
 
 const cd = { c: "1", d: ["2", 3] };
