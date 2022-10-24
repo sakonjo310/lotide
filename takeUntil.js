@@ -6,7 +6,26 @@ const takeUntil = function (array, callback) {
     }
     output.push(item)
   }
+  return output;
 }
+
+//or
+
+// const takeUntil = function(array, callback) {
+//   const results = [];
+ 
+//   for (const item of array) {
+    
+//     const value = callback(item);
+//     if (value) {
+//       return results;
+//     }
+    
+//     results.push(item);
+//   }
+
+//   return results;
+// }
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, x => x < 0);

@@ -40,6 +40,29 @@ const letterPositions = function (sentence) {
   return results;
 };
 
+//or
+
+// const letterPositions = function(str) {
+
+//   const results = {};
+
+//   for (const i in str) {
+//     const letter = str[i];
+     
+//     if (letter === ' ') {
+//       continue; // skip and move on to the next letter
+//     }
+    
+//     if (!results[letter]) {
+//       results[letter] = [];
+//     }
+
+//     results[letter].push(i);
+//   }
+
+//   return results;
+// };
+
 
 console.log(letterPositions("lighthouse in the house"))
 assertArraysEqual(letterPositions("hello").e, [1]);
